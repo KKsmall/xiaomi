@@ -48,12 +48,25 @@ a{
     color: darkorange;
     background-color: #fff;
 }
+.cart-mini:before {
+    content: "\E60C";
+}
 .site-topbar .topbar-info {
     float: right;
+    text-align: center;
+}
+.topbar-info a {
+    padding: 0 1px;
 }
 .site-topbar .sep{
     margin: 0 .3em;
     color: #424242;
+}
+.topbar-info .sep {
+    margin: 0;
+}
+.site-topbar .message a{
+    padding: 0 8px;
 }
 .site-topbar a {
     color: #b0b0b0;
@@ -61,9 +74,20 @@ a{
     /*把链接也转成块级元素*/
     display: inline-block;
 }
-
 .site-topbar a:hover{
     color: white;
+}
+.site-header {
+    height: 100px;
+}
+
+.site-header .header-log {
+    width: 62px;
+    margin-top: 22px;
+}
+.site-header .logo:before {
+    background: url("../image/ia_100000624.png") no-repeat 50% 50%;
+    opacity: 1;
 }
 /*
     ----------------------轮播图区域样式---------------------------------
