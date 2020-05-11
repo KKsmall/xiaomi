@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    background-color: #fff;
+    min-width: 1226px;
+}
+a{
+    text-decoration: none;
+}
+/*
+    ---------------------头部样式-----------------------------------
+*/
+.site-topbar {
+    background-color: #333333;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.container {
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-topbar .topbar-nav {
+    float: left;
+}
+.site-topbar .topbar-cart {
+    float: right;
+    width: 120px;
+    height: 40px;
+    margin-left: 15px;
+
+}
+.site-topbar .cart-mini {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    color: #b0b0b0;
+    background-color: #424242;
+}
+.site-topbar .cart-mini:hover {
+    color: darkorange;
+    background-color: #fff;
+}
+.site-topbar .topbar-info {
+    float: right;
+}
+.site-topbar .sep{
+    margin: 0 .3em;
+    color: #424242;
+}
+.site-topbar a {
+    color: #b0b0b0;
+    line-height: 40px;
+    /*把链接也转成块级元素*/
+    display: inline-block;
+}
+
+.site-topbar a:hover{
+    color: white;
+}
+/*
+    ----------------------轮播图区域样式---------------------------------
+*/
+/*
+    ----------------------商品相关区域样式-------------------------------
+*/
+/*
+    ----------------------底部样式--------------------------------------
+*/
