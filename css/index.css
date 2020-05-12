@@ -33,12 +33,11 @@ a{
     width: 120px;
     height: 40px;
     margin-left: 15px;
-
+    font-size: 12px;
 }
 .site-topbar .cart-mini {
     height: 40px;
     line-height: 40px;
-    font-size: 12px;
     text-align: center;
     display: block;
     color: #b0b0b0;
@@ -48,8 +47,18 @@ a{
     color: darkorange;
     background-color: #fff;
 }
-.cart-mini:before {
-    content: "\E60C";
+.icon-cart:before {
+    content: "\e63b";
+    font-family: "iconfont";
+    /*font-size: 20px;*/
+    /*position: absolute;*/
+    /*left: 5px;*/
+}
+.site-topbar .cart-mini em {
+    margin-right: 4px;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: -2px;
 }
 .site-topbar .topbar-info {
     float: right;
@@ -82,8 +91,9 @@ a{
 }
 
 .site-header .header-log {
+    float: left;
     width: 62px;
-    /*margin-top: 22px;*/
+    margin-top: 22px;
 }
 .site-header .logo {
     float: left;
@@ -91,8 +101,20 @@ a{
     height: 55px;
     width: 55px;
     background-color: #ff7600;
+    position: relative;
+    /*隐藏a标签文字*/
+    text-align: left;
+    text-indent: -9999em;
 }
-.site-header .logo:before {
+.site-header .logo::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    z-index: 1;
+    content: "";
+    transform-origin: 50% 50%;
     background: url("../image/ia_100000624.png") no-repeat 50% 50%;
 }
 .site-header .header-nav{
@@ -138,20 +160,29 @@ a{
 .site-header .search-form{
     width: 296px;
     height: 50px;
+    display: block;
+    position: relative;
 }
 .site-header .no-style-msq{
     color: #333;
 }
 .site-header .search-text, .site-header .search-btn {
+    position: absolute;
     top:0;
     border: 1px solid #e0e0e0;
+    outline: 0;
 }
 .site-header .search-text {
+    margin: 0;
     right: 51px;
     width: 223px;
     height: 48px;
     line-height: 48px;
+    z-index: 1;
     padding: 0 10px;
+}
+.site-header .search-text:focus {
+    border-color: #ff7600;
 }
 .site-header .search-btn {
     right: 0;
@@ -162,6 +193,11 @@ a{
     background-color: #fff;
     color: #616161;
     float: right;
+}
+.site-header .search-btn:hover {
+    background-color: #ff7600;
+    color: #fff;
+    border-color: #ff7600;
 }
 /*
     ----------------------轮播图区域样式---------------------------------
