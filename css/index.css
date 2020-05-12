@@ -212,9 +212,10 @@ ul {
 .home-hero-container .home-left{
     width: 234px;
     height: 460px;
-    background-color: #b0b0b0;
+    /*background-color: #b0b0b0;*/
     position: absolute;
     z-index: 9;
+    background: rgba(105,101,101,.6);
 }
 .home-hero-container .home-category {
     height: 420px;
@@ -304,6 +305,11 @@ ul {
     opacity: 1;
 }
 .home-hero-container .swiper-page a:hover {
+    background: hsla(0,0%,100%,.4);
+    border-color: rgba(0,0,0,.4);
+}
+.swiper-page-active {
+    border: 2px solid hsla(0,0%,100%,.3);
     background: hsla(0,0%,100%,.4);
     border-color: rgba(0,0,0,.4);
 }

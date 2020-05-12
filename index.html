@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1813362_hgfiazx2umi.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="app">
@@ -108,7 +109,19 @@
         </div>
         <div class="home-swiper">
             <div class="pc1">
-                <a href="" class="swiper-item"><img src="image/ia_100000218.jpg" alt=""></a>
+                <a name="img1" href="" class="swiper-item" ><img class="swiper-item-img" src="image/ia_100000218.jpg" alt=""></a>
+            </div>
+            <div class="pc1">
+                <a name="img2" href="" class="swiper-item" ><img class="swiper-item-img" style="display: none" src="image/ia_100000219.jpg" alt=""></a>
+            </div>
+            <div class="pc1">
+                <a name="img3" href="" class="swiper-item" ><img class="swiper-item-img" style="display: none" src="image/ia_100000220.jpg" alt=""></a>
+            </div>
+            <div class="pc1">
+                <a name="img4" href="" class="swiper-item" ><img class="swiper-item-img" style="display: none" src="image/ia_100000222.jpg" alt=""></a>
+            </div>
+            <div class="pc1">
+                <a name="img5" href="" class="swiper-item" ><img class="swiper-item-img" style="display: none" src="image/ia_100000223.jpg" alt=""></a>
             </div>
             <div class="swiper-page">
                 <a href="" class="swiper-page-bullet"></a>
@@ -127,4 +140,25 @@
     <div></div>
 </div>
 </body>
+<script>
+    let index = 0;
+    let pages = document.getElementsByClassName("swiper-page-bullet");
+    console.log(pages)
+    function changeImg() {
+        index++;
+        let imgs = document.getElementsByClassName("swiper-item-img");
+        if (index >= imgs.length) {
+            index = 0;
+        }
+        for (let i = 0; i < imgs.length; i++) {
+            imgs[i].style.display="none";
+            // pages[i].style.border="2px solid hsla(0,0%,100%,.3)";
+            // pages[i].style.background="rgba(0,0,0,.4);"
+        }
+        imgs[index].style.display="block";
+        // pages[index].style.borderColor="rgba(0,0,0,.4);";
+        // pages[index].style.background="hsla(0,0%,100%,.4);"
+    }
+    setInterval(changeImg, 2000);
+</script>
 </html>
