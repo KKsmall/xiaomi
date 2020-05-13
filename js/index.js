@@ -35,8 +35,12 @@ function changeImg() {
     index++;
     if (index >= imgs.length) {
         index = 0;
+        prev.index = imgs.length-1;
+        next.index = 1;
     }
     syncPageAndImg(index)
+    prev.index = index-1;
+    next.index = index+1;
 }
 let interval = setInterval(changeImg, 2000);
 function clickPrev(index) {
@@ -48,7 +52,6 @@ function clickPrev(index) {
   
 }
 function clickNext(index) {
-  console.log(index)
   if (index >= imgs.length) {
     clickPage(0);
   } else {
