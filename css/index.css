@@ -266,10 +266,10 @@ ul {
     /*margin-top: -35px;*/
     right: auto;
     cursor: pointer;
-    background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
+    background: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
 }
 .home-hero-container .swiper-prev:hover {
-    background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat 0 50%;
+    background: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat 0 50%;
 }
 .home-hero-container .swiper-next{
     position: absolute;
@@ -280,10 +280,10 @@ ul {
     left: auto;
     right: 0;
     cursor: pointer;
-    background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%;
+    background: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -125px 50%;
 }
 .home-hero-container .swiper-next:hover {
-    background: url(//i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -43px 50%;
+    background: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -43px 50%;
 }
 .home-hero-container .swiper-page {
     position: absolute;
@@ -303,16 +303,17 @@ ul {
     background: rgba(0,0,0,.4);
     border-radius: 10px;
     opacity: 1;
+    cursor: pointer;
 }
-.home-hero-container .swiper-page a:hover {
+.home-hero-container .swiper-page a:active {
     background: hsla(0,0%,100%,.4);
     border-color: rgba(0,0,0,.4);
 }
-.swiper-page-active {
-    border: 2px solid hsla(0,0%,100%,.3);
+.home-hero-container .swiper-page a.on {
     background: hsla(0,0%,100%,.4);
     border-color: rgba(0,0,0,.4);
 }
+
 /*
     ----------------------商品相关区域样式-------------------------------
 */
