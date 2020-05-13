@@ -60,3 +60,39 @@ function clickNext(index) {
   
 }
 
+// -----------内容区--------------
+let count = 60;
+let sp3 = document.getElementById("sp3");
+let sp2 = document.getElementById("sp2");
+let sp1 = document.getElementById("sp1");
+function checkTime(i) {
+  if (i < 10) {
+    return "0" + i;
+  }
+  return i;
+}
+function countdown() {
+  count--;
+  if (sp1.innerText == 0 && (sp2.innerText == 0) && (count <= 0) ) {
+    sp3.innerText = checkTime(0);
+  }
+  
+  if (count < 0) {
+    count = 59;
+    if (sp1.innerText == 0 && (sp2.innerText - 1 <= 0)) {
+      sp2.innerText = checkTime(0);
+    } else {
+      sp2.innerText = checkTime(sp2.innerText - 1) ;
+    }
+    
+    if (sp2.innerText < 0) {
+      sp2.innerText = 59;
+      sp1.innerText = checkTime(sp1.innerText - 1) ;
+      
+    }
+  }
+  
+  sp3.innerText = checkTime(count);
+}
+let downInterval = setInterval(countdown, 1000);
+
