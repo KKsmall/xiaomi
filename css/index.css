@@ -692,6 +692,16 @@ img {
     text-align: center;
     color: #ff6700;
 }
+
+.brick-item:hover {
+    position: relative;
+    top:-2px;
+    transition: all .3s ease-out;
+    box-shadow: 1px 10px 15px rgba(119, 118, 118, 0.2);
+}
+.more-link:hover {
+    color: #ff6700;
+}
 /*
     ----------------------底部样式--------------------------------------
 */
