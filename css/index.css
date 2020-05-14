@@ -645,6 +645,7 @@ ul {
 }
 .home-brick-box .brick-box-right {
     float: left;
+    margin-left: 14px;
 }
 .brick-item-2 {
     height: 260px;
@@ -699,8 +700,50 @@ img {
     transition: all .3s ease-out;
     box-shadow: 1px 10px 15px rgba(119, 118, 118, 0.2);
 }
-.more-link:hover {
+.home-main .more .more-link:hover {
     color: #ff6700;
+}
+.home-main .home-brick-box .box-bd.m2 {
+    margin-left: 0;
+}
+.home-main .brick-prome-list {
+    height: 614px;
+    padding: 0;
+    margin: 0 0 -14px 0;
+}
+.brick-prome-list .brick-item-m {
+    height: 300px;
+    padding: 0;
+}
+.brick-prome-list a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.brick-box-left {
+    width: 234px;
+}
+.brick-box-right {
+    width: 978px;
+    background-color: #fff;
+    height: 628px;
+}
+.home-brick-box .box-hd .more .tab-list {
+    padding: 16px 0 0;
+    margin: 0;
+    font-size: 16px;
+    list-style-type: none;
+}
+.tab-list li.tab-active, .tab-list li:hover {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+.home-brick-box .box-hd .more .tab-list li {
+    margin:  0 0 0 30px;
+    display: inline-block;
+    padding: 0;
+    transition: border .3s;
+    cursor: pointer;
 }
 /*
     ----------------------底部样式--------------------------------------
