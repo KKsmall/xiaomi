@@ -100,3 +100,29 @@ function countdown() {
 }
 let downInterval = setInterval(countdown, 1000);
 
+
+let ul = $('.home-brick-box .more .tab-list');
+let lis = ul[0].getElementsByTagName('li');
+for (let i = 0; i < lis.length; i++) {
+  lis[i].index = i;
+}
+$('.more .tab-list li').hover(function(){
+  let list = $('.brick-box-right.box-right-m2');
+  for (let i = 0; i < list.length; i++) {
+    if (parseInt(this.index) !== i && !list[i].classList.contains('hid')) {
+      list[i].classList.add('hid');
+    } else {
+        list[i].className = "brick-box-right box-right-m2";
+    }
+  }
+  for (let i = 0; i < lis.length; i++) {
+    lis[i].classList.remove('tab-active')
+    if (this.index === i && !this.classList.contains('tab-active')) {
+      this.classList.add('tab-active')
+    }
+  }
+}, function() {
+  // 当鼠标移出hover后的事件处理，默认不做处理，
+  //不写这个function的话，鼠标移出后会有问题会恢复原始效果
+});
+

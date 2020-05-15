@@ -602,7 +602,7 @@ ul {
     margin-bottom: 8px;
     position: relative;
 }
-.home-brick-box .more {
+.x-plain .box-hd .more {
     position: absolute;
     right: 0;
     top: 0;
@@ -630,6 +630,7 @@ ul {
     margin-left: 14px;
     margin-bottom: 14px;
     background: #fff;
+    position: relative;
 }
 .home-brick-box .box-bd {
     /* 因为子元素都是左外边距，这样最左边的元素会往右边跑，这样设置抵消掉 */
@@ -745,6 +746,67 @@ img {
     transition: border .3s;
     cursor: pointer;
 }
+.hid {
+    display: none;
+}
+.brick-item.brick-item-s {
+    height: 93px;
+    padding-top: 50px;
+}
+.brick-item-s .img {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 80px;
+    height: 80px;
+}
+.brick-item-s .thumb img{
+    width: 80px;
+    height: 80px;
+}
+.brick-item-s .title {
+    margin: -10px 110px 5px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+.brick-item-s .price {
+    margin: 0 110px 0 30px;
+    font-size: 12px;
+    text-align: left;
+}
+.brick-item-s .price span {
+    font-size: 14px;
+}
+.brick-item-s .more {
+    display: block;
+    margin: 0 110px 0 30px;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}
+.brick-item-s .more small{
+    display: block;
+    font-size: 12px;
+    color: #757575;
+    text-align: left;
+}
+
+.iconarrow_right_circle::before {
+    content: "\e60f;";
+    font-size: 48px;
+    line-height: 48px;
+    
+}
+.home-brick-box .brick-item-s .thumb{
+    position: absolute;
+    right: 35px;
+    top: 45px;
+    width: 48px;
+    height: 48px;
+    color: #ff6700;
+}
+
 /*
     ----------------------底部样式--------------------------------------
 */
