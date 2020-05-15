@@ -671,7 +671,7 @@ ul {
 img {
     border: 0;
 }
-.brick-item .title {
+.brick-item .title, .video-item .title {
     margin: 0 10px 2px;
     font-size: 14px;
     font-weight: 400;
@@ -806,7 +806,53 @@ img {
     height: 48px;
     color: #ff6700;
 }
+.x-plain .videos {
+    width: 1240px;
+    height: 285px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.x-plain .videos .video-item {
+    position: relative;
+    float: left;
+    width: 296px;
+    height: 285px;
+    margin-left: 14px;
+    text-align: center;
+    background: #fff;
+    transition: all .2s linear;
+}
+.x-plain .videos .video-item .thumb {
+    position: relative;
+    width: 296px;
+    height: 180px;
+    margin: 0 0 28px;
+}
+.x-plain .videos .video-item .thumb img {
+    width: 296px;
+    height: 180px;
+}
+.video-item .thumb .play {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    width: 32px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background-color: rgba(0,0, 0, .6);
+    color: #fff;
+    transition: all .2s;
+}
 
+.iconarrow-right-filling::before{
+    content: "\e61c;";
+}
+.video-item .thumb .play .iconarrow-right-filling {
+    font-size: 30px;
+    line-height: 20px;
+}
 /*
     ----------------------底部样式--------------------------------------
 */
