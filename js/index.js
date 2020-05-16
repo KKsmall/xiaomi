@@ -109,10 +109,10 @@ for (let i = 0; i < lis.length; i++) {
 $('.more .tab-list li').hover(function(){
   let list = $('.brick-box-right.box-right-m2');
   for (let i = 0; i < list.length; i++) {
-    if (parseInt(this.index) !== i && !list[i].classList.contains('hid')) {
-      list[i].classList.add('hid');
+    if (parseInt(this.index) === i) {
+      list[i].classList.remove('hid');
     } else {
-        list[i].className = "brick-box-right box-right-m2";
+      list[i].classList.add('hid');
     }
   }
   for (let i = 0; i < lis.length; i++) {
@@ -125,4 +125,19 @@ $('.more .tab-list li').hover(function(){
   // 当鼠标移出hover后的事件处理，默认不做处理，
   //不写这个function的话，鼠标移出后会有问题会恢复原始效果
 });
+
+$('.col-contact .wx').hover(function() {
+  let wx = document.getElementById('wx');
+  wx.style.display = "block";
+},function(){
+  let wx = document.getElementById('wx');
+  wx.style.display = "none";
+})
+
+let child = document.getElementsByClassName('children-list')[0];
+$('.home-left .home-category-item').hover(function(){
+  child.style.display = "block";
+}, function() {
+  child.style.display = "none";
+})
 

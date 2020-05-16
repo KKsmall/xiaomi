@@ -10,6 +10,7 @@ body {
 }
 a{
     text-decoration: none;
+    color: #757575;
 }
 ul {
     list-style-type: none;
@@ -208,6 +209,19 @@ ul {
 */
 .home-hero-container{
     position: relative;
+}
+.children-list {
+    display: none;
+    width: 992px;
+    height: 458px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    z-index: 9;
+    box-shadow: 0 8px 16px rgba(0,0, 0, .18);
+    border: 1px solid #e0e0e0;
+    border-left: 0;
 }
 .home-hero-container .home-left{
     width: 234px;
@@ -726,7 +740,6 @@ img {
 }
 .brick-box-right {
     width: 978px;
-    background-color: #fff;
     height: 628px;
 }
 .home-brick-box .box-hd .more .tab-list {
@@ -856,3 +869,136 @@ img {
 /*
     ----------------------底部样式--------------------------------------
 */
+.site-footer  .footer-head {
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.footer-head .saleback {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.saleback li {
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.saleback li:first-child{
+    border-left: 0;
+}
+.saleback li a {
+    color: #616161;
+    transition: color .2s;
+}
+.saleback li a:hover {
+    color: #ff6700;
+}
+.saleback li a em[class*=icon] {
+    margin-right: 6px;
+    font-size: 26px;
+    line-height: 26px;
+    vertical-align: -2px;
+}
+.footer-links {
+    padding: 40px 0;
+}
+.footer-links .col-links {
+    float: left;
+    width: 160px;
+    height: 112px;
+    margin: 0;
+}
+.site-footer .col-links dt {
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.site-footer .col-links dd {
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+.site-footer .col-links a:hover {
+    color: #ff6700;
+}
+.site-footer .col-links a {
+    color: #757575;
+}
+.footer-links .col-contact {
+    float: right;
+    border-left: 1px solid #e0e0e0;
+    width: 251px;
+    text-align: center;
+    color: #616161;
+}
+.footer-links .col-contact p {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+}
+.footer-links .col-contact .phone {
+    color: #ff6700;
+    font-size: 22px;
+    line-height: 1;
+}
+.footer-links .col-contact>a {
+    background: #fff;
+    color: #ff6700;
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ff6700;
+    text-align: center;
+    transition: all .4s;
+    cursor: pointer;
+}
+.follow {
+    font-size: 12px;
+    margin-top: 10px;
+    position: relative;
+}
+.follow a {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-top: -3px;
+    vertical-align: middle;
+}
+.follow a:hover, .site-info a:hover{
+    color: #ff6700;
+}
+.follow .wb {
+    background: url(//cnbj1.fds.api.xiaomi.com/staticsfile/global/wb.png) 50% 0 no-repeat;
+    background-size: cover;
+}
+.follow .wx {
+    background: url(//cnbj1.fds.api.xiaomi.com/staticsfile/global/wx.png) 50% 0 no-repeat;
+    background-size: cover;
+}
+.col-contact .follow img {
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    top: 20px;
+    left: 100px;
+}
+.ir {
+    text-align: left;
+    text-indent: -99999em;
+}
+.sites .sep {
+    margin: 0 .25em;
+    font-family: sans-serif;
+    color: #757575;
+}
+.info-text p {
+    margin: 22px 0;
+}
