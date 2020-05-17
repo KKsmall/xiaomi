@@ -1,3 +1,22 @@
+$(window).scroll(function () {
+  let backtop = document.getElementById('backtop');
+  
+  if((document.documentElement.scrollTop || document.body.scrollTop) > 1500) {
+    backtop.style.display = 'block';
+  } else {
+    backtop.style.display = 'none';
+  }
+});
+
+let search = document.getElementsByClassName('search-btn')[0];
+// 搜索框获取焦点
+$('.no-style-msq .search-text').focus(function(){
+  search.style.borderColor = '#ff7600'
+})
+//失去焦点
+$('.no-style-msq .search-text').blur(function(){
+  search.style.borderColor = '#e0e0e0'
+})
 let imgs = document.getElementsByClassName("swiper-item-img");
 let pages = document.getElementsByClassName("swiper-page-bullet");
 let index = 0;
@@ -59,6 +78,37 @@ function clickNext(index) {
   }
   
 }
+let slides = document.getElementsByClassName('swiper-slide');
+let prevslide = document.getElementById('prev');
+let nextslide = document.getElementById('next');
+prevslide.index = slides.length - 1 - 4;
+nextslide.index = 4;
+for (let i = 0; i < slides.length -1; i++) {
+  slides[i].index = i;
+}
+let move = 0;
+setInterval(() => {
+  move -= 992;
+  prevslide.index = prevslide.index - 4 < 0 ? slides.length - 5 : prevslide.index -4;
+  console.log(nextslide.index)
+  if (nextslide.index > slides.length -1 ) {
+    nextslide.index = 4;
+    $('.flash-right>ul').animate({left: 0})
+    move = 0;
+  } else {
+    nextslide.index = nextslide.index + 4;
+  // for (let i = 0; i < slides.length - 1; i++) {
+    
+  //   slides[i].style.display = "none";
+    
+  // }
+  // for (let i = prevslide.index; i < prevslide.index + 4; i++) {
+  //   slides[i].style.display = "block";
+  // }
+  $('.flash-right>ul').animate({left: move})
+  }
+  
+}, 4000);
 
 // -----------内容区--------------
 let sp3 = document.getElementById("sp3");
